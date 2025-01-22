@@ -35,4 +35,7 @@
     -  Gameboards should keep track of missed attacks so they can display them properly.
     -  Gameboards should be able to report whether or not all of their ships have been sunk.
 - The `Player` class should contain the player's gameboard (or the computer's gameboard) and eventually, methods related to those and the game.
-- 
+- The `Gamestate` class should create new players, make them populate the grid (randomly for now) and start the game.
+    - The game is handled by two other modules: `EventListeners` and `DOMManipulation`.
+    - The first adds all interactivity to the DOM and allows for changing the gamestate.
+    - The second handles the DOM manipulation and the gameboard rendering. 

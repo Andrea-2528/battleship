@@ -1,6 +1,5 @@
 export { Gameboard };
 
-//
 class Gameboard {
 	constructor(size = 10) {
 		this.grid = Array.from({ length: size }, () => Array(size).fill(null));
