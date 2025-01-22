@@ -16,7 +16,6 @@
 `npm run dev`
 
 ### 4. Build for production:
-
 `npm run build`
 
 ### 5. Deploy to GitHub Pages:
