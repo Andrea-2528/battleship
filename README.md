@@ -47,7 +47,7 @@
     - The game is handled by two other modules: `EventListeners` and `DOMManipulation`, which should somehow communicate with `Gamestate`.
     - The first adds all interactivity to the DOM and allows for changing the gamestate.
     - The second handles the DOM manipulation and the gameboard rendering. 
-- Still inside `Gamestate`, it should control the flow of the game, which is made up of three distinct fases with different contextual content:
+- Still inside `Gamestate`, it should control the flow of the game, which is made up of three distinct phases with different contextual content:
     - On load, before clicking "start":
         - The topbar-contextual should contain the game's info.
         - The sidebar-contextual should contain the game's options and the PLACE SHIPS button.
