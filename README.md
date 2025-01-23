@@ -44,6 +44,25 @@
     -  Gameboards should be able to report whether or not all of their ships have been sunk.
 - The `Player` class should contain the player's gameboard (or the computer's gameboard) and eventually, methods related to those and the game.
 - The `Gamestate` class should create new players, make them populate the grid (randomly for now) and start the game.
-    - The game is handled by two other modules: `EventListeners` and `DOMManipulation`.
+    - The game is handled by two other modules: `EventListeners` and `DOMManipulation`, which should somehow communicate with `Gamestate`.
     - The first adds all interactivity to the DOM and allows for changing the gamestate.
     - The second handles the DOM manipulation and the gameboard rendering. 
+- Still inside `Gamestate`, it should control the flow of the game, which is made up of three distinct fases with different contextual content:
+    - On load, before clicking "start":
+        - The topbar-contextual should contain the game's info.
+        - The sidebar-contextual should contain the game's options and the PLACE SHIPS button.
+        - The grid should be empty.
+        - The score should be empty.
+        - The screen-bottom should be empty.
+    - After clicking "Place Ships":
+        -  The sidebar-contextual has an info icon (that will open a modal), a button to randomly place the ships and a button to start the game. The start game button is disabled until all ships are placed.
+        -  The topbar-contextual should contain the ships to place through drag and drop.
+        -  The enemy sector (grid) should be greyed out to make placement more clear.
+        -  The score should show the result (0-0 if it's the first game).
+        -  The screen-bottom should still be empty.
+    - After clicking "Start Game":
+        - The sidebar-contextual should display game's stats like time passed, hits, misses, accuracy and similars.
+        - The topbar-contextual should be empty.
+        - The score should show the result (0-0 if it's the first game).
+        - The screen-bottom should display the whole fleet like the one on the topbar. Depending on which options have been selected, this will show info on the player's fleet and the enemy fleet, like which ship has been hit where, how many remaining ships and so on.
+- Inside the `index.js` file only the main app initialization happens, it acts as a hub for primer modules, and it's what makes everything start, while the game itself is run through the `Gamestate` module.  
