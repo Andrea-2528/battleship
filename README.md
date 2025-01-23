@@ -27,6 +27,14 @@
     - If the hit sinks a ship, it gets marked as such
     - If the sunken ship is the last ship on the board, the computer wins
 ## Code:
+### HTML
+- For the moment, I layed out a basic HTML structure that will remain mostly unchanged.
+- I've specified with comments which elements will be dynamically populated by JS.
+- There's yet to decide how to display a single "ship" and therefore the squares it's made up of. The same structure and design of those squares will be used on the topbar for the drag/drop, on the bottom stats for displaying the fleet, and on the grid itself to play the actual game.
+### CSS
+- CSS for the moment has nothing going on except a basic reset.
+- It will keep being like this until almost everything is done and I need a visual reference of what's happening.
+### Javascript
 - The `Ship` class marks individual ships, with their lenght and whether they've been hit (and how many times) or sunk.
     - It should have a `hit` function to increment the number of hits.
     - It should have a `isSunk` function to check whether the ship has been sunk. 
