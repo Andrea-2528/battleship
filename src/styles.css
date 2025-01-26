@@ -9,8 +9,8 @@
 * {
 	margin: 0;
 	padding: 0;
-  border: 1px solid magenta; /* Debug border */
-  padding: 1px; /* Debug padding */
+	border: 1px solid magenta;
+	padding: 1px;
 }
 
 body {
@@ -74,4 +74,112 @@ h6 {
 /******************************END OF CSS RESET********************************/
 /******************************************************************************/
 
+html {
+	width: 100dvw;
+	height: 100dvh;
+}
+
+body {
+	width: 100%;
+	height: 100%;
+}
+
+.main {
+	width: 100%;
+	height: 100%;
+	display: grid;
+	grid-template-columns: 1fr 4fr;
+}
+
+.sidebar {
+	max-height: 100dvh;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.logo {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.logo-icon {
+	width: 150px;
+}
+
+.sidebar-contextual {
+	height: 100%;
+}
+
+.sidebar-footer {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.github-icon {
+	width: 50px;
+}
+
+.screen {
+	max-height: 100dvh;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.screen-top {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	height: 12%;
+}
+
+.topbar-contextual {
+	height: 100%;
+	width: 80%;
+}
+
+.score {
+	height: 100%;
+	width: 20%;
+}
+
+.score-value {
+	height: 100%;	
+}
+
+.screen-center {
+	height: 68%;
+	display: flex;
+}
+
+.your-sector,
+.enemy-sector {
+	height: 100%;
+	width: 50%;
+	display: flex;
+	flex-direction: column;
+}
+
+.sector-grid {
+	height: 100%;
+}
+
+.screen-bottom {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	height: 20%;
+}
+
+.your-stats,
+.enemy-stats {
+	height: 100%;
+	width: 50%;
+	display: flex;
+	flex-direction: column;
+}
 
