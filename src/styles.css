@@ -84,6 +84,18 @@ body {
 	height: 100%;
 }
 
+#overlay {
+	position: fixed; /* Stays in place, even on scroll */
+	top: 0;
+	left: 0;
+	width: 100vw; /* Occupies full width */
+	height: 100vh; /* Occupies full height */
+	background-color: black;
+	z-index: 9999; /* Sits above everything else */
+	opacity: 1; /* Start fully opaque */
+	transition: opacity 0.6s ease-out; /* Transition for fade effect */
+}
+
 .main {
 	width: 100%;
 	height: 100%;
@@ -105,10 +117,6 @@ body {
 	align-items: center;
 }
 
-.logo-icon {
-	width: 150px;
-}
-
 .sidebar-contextual {
 	height: 100%;
 }
@@ -117,10 +125,6 @@ body {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-}
-
-.github-icon {
-	width: 50px;
 }
 
 .screen {
@@ -148,7 +152,7 @@ body {
 }
 
 .score-value {
-	height: 100%;	
+	height: 100%;
 }
 
 .screen-center {
@@ -182,4 +186,3 @@ body {
 	display: flex;
 	flex-direction: column;
 }
-
